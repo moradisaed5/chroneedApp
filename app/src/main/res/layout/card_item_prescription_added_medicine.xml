@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_layout_prescription_item_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fadingEdgeLength="1dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="2dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_card_item_v2"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/card_item_prescription_added_medicine_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="2dp"
+                android:text="my prescription is musicasdasd"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_large"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/card_item_prescription_added_medicine_image"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_drug_info"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/card_item_prescription_added_medicine_title" />
+
+            <TextView
+                android:id="@+id/card_item_prescription_added_medicine_medicineType_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:padding="2dp"
+                android:text="Type :"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/card_item_prescription_added_medicine_image"
+                app:layout_constraintTop_toBottomOf="@+id/card_item_prescription_added_medicine_title" />
+
+            <TextView
+                android:id="@+id/card_item_prescription_added_medicine_medicineType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:padding="2dp"
+                android:text="medicine type"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                app:layout_constraintStart_toEndOf="@+id/card_item_prescription_added_medicine_medicineType_label"
+                app:layout_constraintTop_toTopOf="@+id/card_item_prescription_added_medicine_medicineType_label" />
+
+            <TextView
+                android:id="@+id/card_item_prescription_added_medicine_administration_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:justificationMode="inter_word"
+                android:padding="2dp"
+                android:text="Administration :"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/card_item_prescription_added_medicine_image"
+                app:layout_constraintTop_toBottomOf="@+id/card_item_prescription_added_medicine_medicineType" />
+
+            <TextView
+                android:id="@+id/card_item_prescription_added_medicine_administration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:padding="2dp"
+                android:text="text administration"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_item_prescription_added_medicine_image"
+                app:layout_constraintTop_toBottomOf="@+id/card_item_prescription_added_medicine_administration_label" />
+
+            <ImageView
+                android:id="@+id/card_item_prescription_added_medicine_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_item_prescription_added_medicine_administration"
+                app:tint="@color/sm_danger_dark" />
+
+            <ImageView
+                android:id="@+id/card_item_prescription_added_medicine_edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_edit"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/card_item_prescription_added_medicine_delete"
+                app:layout_constraintTop_toTopOf="@id/card_item_prescription_added_medicine_delete"
+                app:tint="@color/sm_primary_dark" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.prescription.PrescriptionAddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_prescription_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_prescription_add_topmenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sm_primary_light"
+            android:padding="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_prescription_add_btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save Record"
+                android:textAllCaps="false"
+                android:textColor="@color/sm_success_xlight"
+                android:textSize="@dimen/sm_button_text_size_default"
+                app:background="@drawable/shape_bg_btnsubmit"
+                app:backgroundTint="@color/sm_success_dark"
+                app:icon="@drawable/ic_tick"
+                app:iconSize="@dimen/sm_button_icon_size_default"
+                app:iconTint="@color/sm_success_xlight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_prescription_add_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textAllCaps="false"
+                android:textColor="@color/sm_primary_xlight"
+                android:textSize="@dimen/sm_button_text_size_default"
+                app:background="@drawable/shape_bg_btnback"
+                app:backgroundTint="@color/sm_primary_dark"
+                app:icon="@drawable/ic_back"
+                app:iconSize="@dimen/sm_button_icon_size_default"
+                app:iconTint="@color/sm_primary_xlight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_prescription_add_topmenu">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="60dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Title"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Description"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_description"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="textMultiLine"
+                            android:lines="5"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Date"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_form_date_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="datetime"
+                            android:lines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Medicines ..."
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+
+                        app:boxStrokeWidthFocused="0dp"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/fragment_prescription_add_form_drugList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_txt_bg"
+                            android:padding="20dp"
+                            android:text=""
+                            android:visibility="gone" />
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fragment_prescription_add_addDrug"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add Medicine"
+                            android:textAllCaps="false"
+                            android:textColor="@color/sm_info_xlight"
+                            android:textSize="@dimen/sm_button_text_size_default"
+                            app:background="@drawable/shape_bg_btnback"
+                            app:backgroundTint="@color/sm_info_dark"
+                            app:icon="@drawable/ic_plus"
+                            app:iconSize="@dimen/sm_button_icon_size_default"
+                            app:iconTint="@color/sm_info_xlight"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/fragment_prescription_add_new_medicine_from_gallery"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_gallery"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/sm_primary_dark"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fragment_prescription_add_medicine_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        tools:viewBindingType="androidx.recyclerview.widget.RecyclerView" />
+                </LinearLayout>
+
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragment_prescription_add_new_medicine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fragment_prescription_add_new_medicine_topmenu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/sm_primary_light"
+            android:padding="0dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_prescription_add_new_medicine_btnAddMedicine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Medicine"
+                android:textAllCaps="false"
+                android:textColor="@color/sm_success_xlight"
+                android:textSize="@dimen/sm_button_text_size_default"
+                app:background="@drawable/shape_bg_btnsubmit"
+                app:backgroundTint="@color/sm_success_dark"
+                app:icon="@drawable/ic_tick"
+                app:iconSize="@dimen/sm_button_icon_size_default"
+                app:iconTint="@color/sm_success_xlight"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/fragment_prescription_add_new_medicine_btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="back"
+                android:textAllCaps="false"
+                android:textColor="@color/sm_primary_xlight"
+                android:textSize="@dimen/sm_button_text_size_default"
+                app:background="@drawable/shape_bg_btnback"
+                app:backgroundTint="@color/sm_primary_dark"
+                app:icon="@drawable/ic_back"
+                app:iconSize="@dimen/sm_button_icon_size_default"
+                app:iconTint="@color/sm_primary_xlight"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragment_prescription_add_new_medicine_topmenu">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingBottom="60dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Name"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Note"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_note"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="textMultiLine"
+                            android:lines="5"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Medicine Type"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/fragment_prescription_add_new_medicine_medicineType"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_txt_bg"
+                            android:padding="20dp"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/shape_bg_card_item_v1">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:id="@id/fragment_prescription_add_new_medicine_title"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="Medicine Image"
+                                android:textAlignment="center"
+                                android:textColor="@color/sm_primary_dark"
+                                android:textSize="@dimen/sm_text_size_default"
+                                android:textStyle="bold"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                            <ImageView
+                                android:id="@+id/fragment_prescription_add_new_medicine_gallery"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_gallery"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/fragment_prescription_add_new_medicine_title"
+                                app:tint="@color/sm_primary_dark" />
+
+                            <ImageView
+                                android:id="@+id/fragment_prescription_add_new_medicine_imageShow"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp"
+
+                                android:layout_margin="10dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/ic_gallery"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/fragment_prescription_add_new_medicine_title" />
+
+                            <Button
+                                android:id="@+id/fragment_prescription_add_new_medicine_btnClearImage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:text="Clean"
+                                android:textColor="@color/sm_danger_dark"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/fragment_prescription_add_new_medicine_imageShow" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Administration"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_administration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="textMultiLine"
+                            android:lines="5"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Qty"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_qty"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint=""
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dosage Every"
+                            android:textColor="@color/sm_primary_dark"
+                            android:textSize="@dimen/sm_text_size_default"
+                            android:textStyle="bold" />
+
+                        <Spinner
+                            android:id="@+id/fragment_prescription_add_new_medicine_dosageEvery"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:entries="@array/dataMedicineDosageUseEvery"
+                            android:padding="17dp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Start Usage Date"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_startUsageDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Start Usage Time"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_usageTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="text"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fragment_prescription_add_new_medicine_dosageEvery_durationSection"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Use every 1 hours"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_usageTime_durationTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:text="" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fragment_prescription_add_new_medicine_dosageEvery_weekDays"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint=""
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:startIconTint="@color/sm_primary_dark">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="days of week"
+                            android:textColor="@color/sm_primary_dark"
+                            android:textSize="@dimen/sm_text_size_default"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDaySU"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="SU"
+                                android:textOn="SU" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDayMo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="Mo"
+                                android:textOn="Mo" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDayTu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="Tu"
+                                android:textOn="Tu" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDayWe"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="We"
+                                android:textOn="We" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDayTh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="Th"
+                                android:textOn="Th" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDayFr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="Fr"
+                                android:textOn="Fr" />
+
+                            <ToggleButton
+                                android:id="@+id/fragment_prescription_add_new_medicine_weekDaySa"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAllCaps="false"
+                                android:textOff="Sa"
+                                android:textOn="Sa" />
+                        </LinearLayout>
+
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="End Time"
+                        android:textColor="@color/sm_primary_dark"
+                        android:textSize="@dimen/sm_text_size_default"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/fragment_prescription_add_new_medicine_useTimeType"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_txt_bg"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <RadioButton
+                            android:id="@+id/fragment_prescription_add_new_medicine_useTimeType_never"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Never" />
+
+                        <RadioButton
+                            android:id="@+id/fragment_prescription_add_new_medicine_useTimeType_on"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="On" />
+
+                        <RadioButton
+                            android:id="@+id/fragment_prescription_add_new_medicine_useTimeType_after"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="After" />
+                    </RadioGroup>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fragment_prescription_add_new_medicine_endDateSection"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="End Date"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_endDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="datetime"
+                            android:lines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fragment_prescription_add_new_medicine_occurrenceSection"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="Occurrence"
+                        app:boxStrokeColor="@color/sm_light_light"
+                        app:boxStrokeWidth="0dp"
+                        app:boxStrokeWidthFocused="0dp"
+                        app:endIconMode="clear_text"
+                        app:hintTextColor="@color/sm_primary_dark">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/fragment_prescription_add_new_medicine_occurrence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_txt_bg"
+                            android:inputType="number"
+                            android:lines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

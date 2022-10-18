@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/card_layout_medical_item_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fadingEdgeLength="1dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="2dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_card_item_comment"
+            android:padding="5dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/request_image_layout"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/request_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_user" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/card_item_social_request_full_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:padding="2dp"
+                android:text="Saeid moradi"
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/request_image_layout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/card_item_social_request_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:justificationMode="inter_word"
+                android:text="20 min ago "
+                android:textColor="@color/sm_primary_dark"
+                android:textSize="@dimen/sm_text_size_default"
+                app:layout_constraintStart_toEndOf="@id/request_image_layout"
+                app:layout_constraintTop_toBottomOf="@+id/card_item_social_request_full_name" />
+
+            <ImageView
+                android:id="@+id/card_item_social_request_accept"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_accept"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/sm_success_dark" />
+
+            <ImageView
+                android:id="@+id/card_item_social_request_reject"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toStartOf="@id/card_item_social_request_accept"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/sm_danger_dark" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

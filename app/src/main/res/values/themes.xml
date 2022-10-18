@@ -1,0 +1,319 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ChroneedApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sm_primary_medium</item>
+        <item name="colorPrimaryVariant">@color/sm_primary_dark</item>
+        <item name="colorOnPrimary">@color/sm_light_light</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sm_success_medium</item>
+        <item name="colorSecondaryVariant">@color/sm_success_dark</item>
+        <item name="colorOnSecondary">@color/sm_dark_dark</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="PageStyle" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/sm_primary_medium</item>
+        <item name="colorPrimaryVariant">@color/sm_primary_dark</item>
+        <item name="colorOnPrimary">@color/sm_light_light</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/sm_success_medium</item>
+        <item name="colorSecondaryVariant">@color/sm_success_dark</item>
+        <item name="colorOnSecondary">@color/sm_dark_dark</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Buttons application theme. -->
+    <style name="BigButtonPrimary" parent="Widget.Material3.Button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/sm_primary_light</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:backgroundTint">@color/sm_primary_dark</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ButtonNormal" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:backgroundTint">@color/sm_light_light</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:backgroundTint">@color/sm_primary_dark</item>
+        <item name="android:textColor">@color/sm_light_medium</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonSubmit" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:backgroundTint">@color/sm_success_dark</item>
+        <item name="android:textColor">@color/sm_light_medium</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ButtonDelete" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:backgroundTint">@color/sm_danger_medium</item>
+        <item name="android:textColor">@color/sm_light_medium</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- TextBox application theme. -->
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="hintTextColor">@color/sm_primary_dark</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@color/sm_light_xlight</item>
+        <item name="startIconTint">@color/sm_primary_dark</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="endIconTint">@color/sm_primary_dark</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextInputEditText" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="android:background">@drawable/shape_txt_bg</item>
+        <item name="android:inputType">text</item>
+        <item name="android:lines">1</item>
+        <item name="android:textCursorDrawable">@color/sm_primary_dark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextInputEditTextMulti" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="android:background">@drawable/shape_simple_textbox</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:lines">5</item>
+        <item name="android:textCursorDrawable">@color/sm_dark_medium</item>
+        <item name="android:textColor">@color/sm_dark_light</item>
+        <item name="android:textColorHighlight">@color/sm_light_medium</item>
+    </style>
+
+    <!-- Card View application theme. -->
+    <style name="SimpleCardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:backgroundTint">@color/sm_light_light</item>
+        <item name="cardCornerRadius">15dp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="MultiCardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/shape_simple_card_view</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- Text View application theme. -->
+    <style name="SimpleCardViewText" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode" tools:ignore="NewApi">inter_word</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:background">@drawable/shape_simple_card_view</item>
+    </style>
+
+    <style name="SimpleTextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode" tools:ignore="NewApi">inter_word</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:textColor">@color/sm_dark_light</item>
+        <item name="android:background">@drawable/shape_simple_card_view</item>
+    </style>
+
+    <style name="SimpleTextViewTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:justificationMode" tools:ignore="NewApi">inter_word</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:background">@drawable/shape_simple_card_view</item>
+    </style>
+
+    <style name="TextViewLabel" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="singleLine">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:background">@drawable/shape_simple_label</item>
+    </style>
+    <style name="TextViewLabelLink" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="singleLine">true</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:textColor">@color/sm_primary_dark</item>
+    </style>
+
+    <style name="TextViewLabelDeActive" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="singleLine">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="lineHeight">20sp</item>
+        <item name="android:textColor">@color/sm_light_dark</item>
+        <item name="android:background">@drawable/shape_simple_label</item>
+    </style>
+
+    <!-- Image View application theme. -->
+    <style name="SimpleImageView" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:adjustViewBounds">true</item>
+    </style>
+
+    <!-- Check Box application theme. -->
+    <style name="SimpleCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint">@color/sm_dark_medium</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- RadioButton application theme. -->
+    <style name="SimpleRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:buttonTint">@color/sm_dark_medium</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- RadioButton application theme. -->
+    <style name="SimpleToggleButton" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:backgroundTint">@color/sm_light_medium</item>
+        <item name="android:layout_margin">10dp</item>
+    </style>
+
+    <!-- RadioButton application theme. -->
+    <style name="SimpleSwitch" parent="Widget.AppCompat.CompoundButton.Switch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/sm_dark_medium</item>
+        <item name="android:thumbTint">@color/sm_dark_medium</item>
+        <item name="android:trackTint" tools:targetApi="m">@color/sm_dark_dark</item>
+    </style>
+
+    <!-- Chips application theme. -->
+    <style name="SimpleChipChoice" parent="Widget.MaterialComponents.Chip.Choice">
+        <item name="android:backgroundTint">@drawable/shape_chip_selector_background</item>
+        <item name="android:textColor">@drawable/shape_chip_selector_text_color</item>
+    </style>
+
+    <style name="SimpleChipChoiceChecked" parent="Widget.MaterialComponents.Chip.Choice"></style>
+
+    <style name="SimpleChipAction" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="android:backgroundTint">@color/sm_light_medium</item>
+    </style>
+
+    <style name="SimpleChipEntry" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="checkedIconVisible">false</item>
+        <item name="closeIconTint">@color/sm_dark_medium</item>
+    </style>
+
+    <style name="SimpleChipFilter" parent="Widget.MaterialComponents.Chip.Filter">
+        <item name="checkedIconTint" tools:targetApi="o">@color/sm_dark_medium</item>
+    </style>
+
+    <!-- Seekbar application theme. -->
+    <style name="SimpleSeekbar" parent="Widget.AppCompat.SeekBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:progressTint">@color/sm_dark_light</item>
+        <item name="android:progressBackgroundTint">@color/sm_dark_medium</item>
+        <item name="android:thumbTint">@color/sm_dark_light</item>
+        <item name="android:max">100</item>
+        <item name="android:progress">10</item>
+    </style>
+
+    <style name="SimpleSeekbarDiscrete" parent="Widget.AppCompat.SeekBar.Discrete">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:progressTint">@color/sm_dark_light</item>
+        <item name="android:progressBackgroundTint">@color/sm_dark_medium</item>
+        <item name="android:thumbTint">@color/sm_dark_light</item>
+        <item name="android:max">20</item>
+        <item name="android:progress">2</item>
+
+    </style>
+
+    <!-- RatingBar application theme. -->
+    <style name="SimpleRatingBar" parent="Widget.AppCompat.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:rating">3</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:progressTint">@color/sm_success_dark</item>
+        <item name="android:secondaryProgressTint">@color/sm_success_medium</item>
+        <item name="android:progressBackgroundTint">@color/sm_success_medium</item>
+        <item name="android:indeterminateTint">@color/sm_success_dark</item>
+    </style>
+
+    <style name="SimpleRatingBarIndicator" parent="Widget.AppCompat.RatingBar.Indicator">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:rating">3</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:progressTint">@color/sm_success_dark</item>
+        <item name="android:secondaryProgressTint">@color/sm_success_medium</item>
+        <item name="android:progressBackgroundTint">@color/sm_light_medium</item>
+        <item name="android:indeterminateTint">@color/sm_success_dark</item>
+    </style>
+
+    <style name="SimpleRatingBarSmall" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:rating">3</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:progressTint">@color/sm_success_dark</item>
+        <item name="android:secondaryProgressTint">@color/sm_success_medium</item>
+        <item name="android:progressBackgroundTint">@color/sm_light_medium</item>
+        <item name="android:indeterminateTint">@color/sm_success_dark</item>
+    </style>
+</resources>

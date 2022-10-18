@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/buttommenu_settings"
+        android:icon="@drawable/shape_settings"
+        android:title="Settings" />
+    <item
+        android:id="@+id/buttommenu_home"
+        android:icon="@drawable/shape_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/buttommenu_placeholder"
+        android:enabled="false"
+        android:title="" />
+    <item
+        android:id="@+id/bottom_menu_social"
+        android:icon="@drawable/ic_social"
+        android:title="Social" />
+    <item
+        android:id="@+id/buttommenu_perofile"
+        android:icon="@drawable/shape_person"
+
+        android:title="Profile" />
+</menu>

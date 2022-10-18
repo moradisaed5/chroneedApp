@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.social.SocialPostFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/layout_medical_item_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="100dp"
+                    android:fadingEdgeLength="1dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/shape_bg_card_item_v2"
+                        android:padding="20dp">
+
+                        <TextView
+                            android:id="@+id/social_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:padding="2dp"
+                            android:text=""
+                            android:textColor="@color/sm_primary_dark"
+                            android:textSize="@dimen/sm_text_size_large"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/social_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/social_title" />
+
+                        <TextView
+                            android:id="@+id/social_description"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:justificationMode="inter_word"
+                            android:padding="2dp"
+                            android:text=""
+                            android:textColor="@color/sm_dark_medium"
+                            android:textSize="@dimen/sm_text_size_default"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/social_image" />
+
+                        <ImageView
+                            android:id="@+id/social_like"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_heart"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/social_description"
+                            app:tint="@color/sm_primary_dark" />
+
+                        <ImageView
+                            android:id="@+id/social_like_filled"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_heart_filled"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/social_description"
+                            app:tint="@color/sm_danger_dark" />
+
+                        <ImageView
+                            android:id="@+id/social_comment"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/ic_comment"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/social_description"
+                            app:tint="@color/sm_primary_dark" />
+
+                        <TextView
+                            android:id="@+id/social_comment_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="5dp"
+                            android:justificationMode="inter_word"
+                            android:padding="2dp"
+                            android:text=""
+                            android:textColor="@color/sm_primary_dark"
+                            android:textSize="@dimen/sm_text_size_default"
+                            app:layout_constraintStart_toEndOf="@+id/social_comment"
+                            app:layout_constraintTop_toTopOf="@+id/social_comment" />
+
+                        <TextView
+                            android:id="@+id/social_like_count"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:justificationMode="inter_word"
+                            android:padding="2dp"
+                            android:text=""
+                            android:textColor="@color/sm_primary_dark"
+                            android:textSize="13sp"
+                            app:layout_constraintStart_toStartOf="@+id/social_comment"
+                            app:layout_constraintTop_toBottomOf="@+id/social_comment" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/social_comment_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@id/social_like_count">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:hint="send comment ..."
+                                app:boxStrokeColor="@color/sm_light_light"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:endIconMode="clear_text"
+                                app:hintTextColor="@color/sm_primary_dark"
+                                app:layout_constraintEnd_toStartOf="@+id/post_record_voice"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/social_comment_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/shape_txt_bg"
+                                    android:imeOptions="actionDone"
+                                    android:inputType="text"
+                                    android:lines="1" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <ImageView
+                                android:id="@+id/post_comment_send"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_submit"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/sm_primary_dark" />
+                            <ImageView
+                                android:id="@+id/post_record_voice"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_record_main"
+                                app:layout_constraintEnd_toStartOf="@+id/post_comment_send"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:tint="@color/sm_danger_dark" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/social_post_comments_list_recycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                app:backgroundTint="@android:color/transparent"
+                                app:layout_constraintTop_toBottomOf="@+id/post_record_voice"
+                                tools:viewBindingType="androidx.recyclerview.widget.RecyclerView" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_listening"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/sm_light_xlight"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_listening" />
+</FrameLayout>

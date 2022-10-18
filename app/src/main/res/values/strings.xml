@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Chroneed</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
+    <!--                 Login Page                      -->
+    <string name="login_page_welcome">Welcome back!</string>
+
+    <string name="login_page_input_email_hint">Email</string>
+    <string name="login_page_input_email_helpertext">Enter your email ...</string>
+    <string name="login_page_input_password_hint">Password</string>
+    <string name="login_page_input_password_helpertext">Enter your password ...</string>
+    <string name="login_page_txt_forgetpassword">Forgot Password?</string>
+    <string name="login_page_btn_login">Login</string>
+    <string name="login_page_txt_before_register">Don\'t have an account?</string>
+    <string name="login_page_btn_signup">SignUp</string>
+    <!--                 Register Page                      -->
+    <string name="register_page_title">Register your self ...</string>
+    <string name="register_page_input_firstname_hint">First Name</string>
+    <string name="register_page_input_firstname_helpertext">Enter first name ...</string>
+    <string name="register_page_input_lastname_hint">Last Name</string>
+    <string name="register_page_input_lastname_helpertext">Enter last name ...</string>
+    <string name="register_page_input_email_hint">Email</string>
+    <string name="register_page_input_email_helpertext">Enter email ...</string>
+    <string name="register_page_input_password_hint">Password</string>
+    <string name="register_page_input_password_helpertext">Enter password ...</string>
+    <string name="register_page_input_repassword_hint">Repeat Password</string>
+    <string name="register_page_input_repassword_helpertext">Enter repeat password ...</string>
+    <string name="register_page_input_birthday_hint">Birth Day</string>
+    <string name="register_page_input_birthday_helpertext">Enter birth day ...</string>
+    <string name="register_page_input_securitynumber_hint">Security Number</string>
+    <string name="register_page_input_securitynumber_helpertext">Enter security number ...</string>
+    <string name="register_page_input_phonenumber_hint">Phone Number</string>
+    <string name="register_page_input_phonenumber_helpertext">Enter phone number ...</string>
+    <string name="register_page_input_state_hint">State</string>
+    <string name="register_page_input_state_helpertext">Enter state ...</string>
+    <string name="register_page_input_city_hint">city</string>
+    <string name="register_page_input_city_helpertext">Enter city ...</string>
+    <string name="register_page_input_street_hint">Street</string>
+    <string name="register_page_input_street_helpertext">Enter street ...</string>
+    <string name="register_page_input_zipcode_hint">Zip Code</string>
+    <string name="register_page_input_zipcode_helpertext">Enter zip code ...</string>
+
+    <!--                 ForgetPassword Page                -->
+    <string name="forgetpassword_page_txt_before_loginback">You have username and password already?</string>
+    <string name="forgetpassword_page_btn_loginback">Sign In</string>
+    <string name="forgetpassword_page_btn_sendcode">Send</string>
+    <string name="forgetpassword_page_input_email_hint">Email</string>
+    <string name="forgetpassword_page_input_email_helpertext">Enter your email ...</string>
+    <!--                 ForgetPassword Page                -->
+    <string name="changepasswordbyforget_input_email_hint">Email</string>
+    <string name="changepasswordbyforget_input_email_helpertext"></string>
+    <string name="changepasswordbyforget_input_newpassword_hint">New Password</string>
+    <string name="changepasswordbyforget_input_newpassword_helpertext"></string>
+    <string name="changepasswordbyforget_input_renewpassword_hint">Repeat New Password</string>
+    <string name="changepasswordbyforget_input_renewpassword_helpertext"></string>
+    <string name="changepasswordbyforget_input_code_hint">Forget Password Code</string>
+    <string name="changepasswordbyforget_input_code_helpertext"></string>
+    <string name="changepasswordbyforget_btn_changepassword">Change Password</string>
+    <string name="changepasswordbyforget_page_txt_before_loginback">You have username and password already?</string>
+    <string name="changepasswordbyforget_page_btn_loginback">Sign In</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello home fragment</string>
+    <string name="hello_profile_fragment">Hello profile fragment</string>
+    <string name="hello_search_fragment">Hello search fragment</string>
+    <string name="hello_settings_fragment">Hello settings fragment</string>
+    <string name="hello_bluetooth_fragment">Hello bluetooth fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--                 Home Page                          -->
+
+
+    <!--                 Settings                          -->
+    <string name="settings_home_topmenu_iconSize">30dp</string>
+    <string name="settings_home_topmenu_textSize">10sp</string>
+    <string-array name="sm_Languages">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Swift</item>
+        <item>Python</item>
+        <item>Scala</item>
+        <item>Perl</item>
+    </string-array>
+    <string-array name="dataMedicineDosageUnit">
+        <item>g</item>
+        <item>mg</item>
+        <item>mcg</item>
+        <item>IU</item>
+    </string-array>
+    <string-array name="dataMedicineDosageUseEvery">
+        <item>hour</item>
+        <item>day</item>
+        <item>week</item>
+        <item>month</item>
+        <item>year</item>
+    </string-array>
+    <string-array name="dataCommandType">
+        <item>Call</item>
+        <item>Message</item>
+    </string-array>
+    <string-array name="menuSettingItems">
+        <item>User Profile</item>
+        <item>Sync Commands</item>
+        <item>Change Password</item>
+        <item>Sign Out</item>
+        <item>Exit</item>
+    </string-array>
+
+    <string name="change_time">time reset</string>
+    <string name="on_alarm">Turn on the alarm</string>
+</resources>

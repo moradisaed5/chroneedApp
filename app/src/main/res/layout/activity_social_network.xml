@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/PageStyle"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sm_light_xlight"
+    tools:context=".ui.social.SocialNetworkActivity">
+
+    <FrameLayout
+        android:id="@+id/social_layout_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/main_menu_bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/sm_light_xlight"
+        android:backgroundTint="@color/sm_light_xlight"
+        android:backgroundTintMode="screen"
+        android:outlineAmbientShadowColor="@color/sm_light_xlight"
+        android:outlineSpotShadowColor="@color/sm_light_xlight"
+        app:backgroundTint="@color/sm_light_xlight"
+        app:fabCradleMargin="15dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="0dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/main_menu_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="15dp"
+            android:outlineAmbientShadowColor="@color/sm_primary_light"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            app:backgroundTint="@android:color/transparent"
+            app:itemIconTint="@color/sm_primary_dark"
+            app:itemRippleColor="@color/sm_primary_light"
+            app:itemTextColor="@color/sm_primary_dark"
+            app:menu="@menu/bottom_nav_menu_social" />
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/main_menu_fab_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/sm_primary_dark"
+        android:src="@drawable/ic_plus"
+        app:borderWidth="0dp"
+        app:layout_anchor="@id/main_menu_bottomAppBar"
+        app:tint="@color/sm_light_xlight" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

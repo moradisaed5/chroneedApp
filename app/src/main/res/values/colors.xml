@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--        sm colors        -->
+
+    <color name="sm_primary_xlight">#f2f8fd</color>
+    <color name="sm_primary_light">#dbe8fb</color>
+    <color name="sm_primary_medium">#6b91ca</color>
+    <color name="sm_primary_dark">#124582</color>
+    <color name="sm_light_xlight">#fafafa</color>
+    <color name="sm_light_light">#eceef2</color>
+    <color name="sm_light_medium">#dddee2</color>
+    <color name="sm_light_dark">#646665</color>
+    <color name="sm_danger_xlight">#f3e9ea</color>
+    <color name="sm_danger_light">#f6e3e5</color>
+    <color name="sm_danger_medium">#ffcdd2</color>
+    <color name="sm_danger_dark">#83153b</color>
+    <color name="sm_success_xlight">#e5ffff</color>
+    <color name="sm_success_light">#b2dfdb</color>
+    <color name="sm_success_medium">#80cbc4</color>
+    <color name="sm_success_dark">#00796b</color>
+    <color name="sm_info_xlight">#e6ffff</color>
+    <color name="sm_info_light">#b3e5fc</color>
+    <color name="sm_info_medium">#4fc3f7</color>
+    <color name="sm_info_dark">#0288d1</color>
+    <color name="sm_dark_xlight">#eeeeee</color>
+    <color name="sm_dark_light">#e0e0e0</color>
+    <color name="sm_dark_medium">#607d8b</color>
+    <color name="sm_dark_dark">#37474f</color>
+</resources>
